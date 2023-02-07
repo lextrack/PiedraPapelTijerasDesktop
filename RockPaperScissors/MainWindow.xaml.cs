@@ -81,16 +81,6 @@ namespace RockPaperScissors
                     MessageBox.Show("PERDISTE", "💢");
                     perdidas++;
                 }
-
-                if (triunfos == 3 || perdidas == 3)
-                {
-                    MessageBox.Show("Se acabo la partida. Ganaste " + triunfos + " veces y perdiste " + perdidas + " veces.", "Resultados");
-
-                    if (MessageBox.Show("¿Quieres otra ronda?", "Continuar", MessageBoxButton.YesNo) == MessageBoxResult.No)
-                    {
-                        Application.Current.Shutdown();
-                    }
-                }
             }
             else
             {
