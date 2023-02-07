@@ -8,10 +8,10 @@ namespace RockPaperScissors
     /// </summary>
     public partial class MainWindow : Window
     {
-        int jugador = 0;
-        int pc = 0;
-        int triunfos = 0;
-        int perdidas = 0;
+        int Jugador = 0;
+        int Pc = 0;
+        int Triunfos = 0;
+        int Perdidas = 0;
 
         public MainWindow()
         {
@@ -50,42 +50,48 @@ namespace RockPaperScissors
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
-            if (int.TryParse(promptUser.Text, out jugador) && jugador >= 1 && jugador <= 3)
+            if (int.TryParse(promptUser.Text, out Jugador) && Jugador >= 1 && Jugador <= 3)
             {
-                pc = Aleatorio(1, 3);
-                MessageBox.Show("PC elige " + Eleccion(pc), "🎮");
-                MessageBox.Show("Tú eliges " + Eleccion(jugador), "🎮");
+                Pc = Aleatorio(1, 3);
+                MessageBox.Show("La PC elige " + Eleccion(Pc), "🎮");
+                MessageBox.Show("Tú eliges " + Eleccion(Jugador), "🎮");
 
-                if (pc == jugador)
+                if (Pc == Jugador)
                 {
                     MessageBox.Show("EMPATADOS", "‼");
                 }
-                else if (jugador == 1 && pc == 3)
+                else if (Jugador == 1 && Pc == 3)
                 {
                     MessageBox.Show("GANASTE", "🏆");
-                    triunfos++;
+                    Triunfos++;
                 }
-                else if (jugador == 2 && pc == 1)
+                else if (Jugador == 2 && Pc == 1)
                 {
                     MessageBox.Show("GANASTE", "🏆");
-                    triunfos++;
+                    Triunfos++;
                 }
-                else if (jugador == 3 && pc == 2)
+                else if (Jugador == 3 && Pc == 2)
                 {
                     MessageBox.Show("GANASTE", "🏆");
-                    triunfos++;
+                    Triunfos++;
                 }
                 else
                 {
                     MessageBox.Show("PERDISTE", "💢");
-                    perdidas++;
+                    Perdidas++;
                 }
+            }
+            else if (promptUser.Text == "")
+            {
+                MessageBox.Show("La caja de texto no puede estar vacía, elige uno de los números", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             else
             {
-                MessageBox.Show("Solo puedes ingrear numeros (1 para piedra, 2 para papel, 3 para tijera)");
+                MessageBox.Show("Solo puedes ingrear números (1 para piedra, 2 para papel y 3 para tijera)", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+
+            pcPuntosEtiqueta.Content = "Puntos de la PC: " + Perdidas;
+            jugadorPuntosEtiqueta.Content = "Tu puntaje: " + Triunfos;
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -97,6 +103,11 @@ namespace RockPaperScissors
         {
             ReglasForm newReglasForm = new();
             newReglasForm.Show();
+        }
+
+        private void promptUser_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+
         }
     }
 }
