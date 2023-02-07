@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <FileVersion>1.0.0</FileVersion>
+    <Copyright>lextrack</Copyright>
+    <ApplicationIcon>scissors.ico</ApplicationIcon>
+    <Authors>Lextrack</Authors>
+    <Description>Juega a piedra, papel y tijeras</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="scissors.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="scissors.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="scissors.png" />
+  </ItemGroup>
+
+</Project>
