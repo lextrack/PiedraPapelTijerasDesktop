@@ -8,17 +8,17 @@
         Title="¿Cómo jugar?" Height="325" Width="400" ResizeMode="NoResize" Icon="/scissors.png" WindowStartupLocation="Manual" Left="355" Top="270">
     <Grid Margin="0,0,0,-6">
         <Border Background="IndianRed" Margin="33,13,29,217" Padding="12" CornerRadius="15,15,15,15" VerticalAlignment="Top">
-            <TextBlock FontSize="13" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Debes escribir uno de los siguientes número en la caja de texto"/>
+            <TextBlock FontSize="14" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Debes escribir uno de los siguientes número en la caja de texto"/>
         </Border>
 
         <Border Background="#FF6AC1DE" Margin="142,84,128,172" Padding="12" CornerRadius="15,15,15,15" VerticalAlignment="Top">
-            <TextBlock FontSize="13" HorizontalAlignment="Left" TextWrapping="Wrap" Width="96" Margin="12,-4,0,-6">
+            <TextBlock FontSize="14" HorizontalAlignment="Left" TextWrapping="Wrap" Width="96" Margin="12,-4,0,-6">
         Opciones:
             </TextBlock>
         </Border>
 
         <Border Background="IndianRed" Margin="120,122,106,88" Padding="12" CornerRadius="15,15,15,15" VerticalAlignment="Top">
-            <TextBlock FontSize="13" HorizontalAlignment="Center" TextWrapping="Wrap" Width="98">
+            <TextBlock FontSize="14" HorizontalAlignment="Center" TextWrapping="Wrap" Width="106">
         1 para piedra 🧱
         2 para papel 📄
         3 para tijeras ✂
@@ -26,7 +26,7 @@
         </Border>
 
         <Border Background="IndianRed" Margin="33,214,29,15" Padding="12" CornerRadius="15,15,15,15" VerticalAlignment="Top">
-            <TextBlock FontSize="13" HorizontalAlignment="Center" TextWrapping="Wrap">
+            <TextBlock FontSize="14" HorizontalAlignment="Center" TextWrapping="Wrap">
         No hay restricciones por turnos, las partidas son infinitas.
             </TextBlock>
         </Border>

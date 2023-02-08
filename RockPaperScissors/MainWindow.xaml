@@ -14,7 +14,7 @@
         <Button x:Name="rulesbtn" Content="¿Cómo jugar?" HorizontalAlignment="Left" Margin="51,421,0,0" Width="92" FontFamily="Segoe UI" FontSize="14" VerticalAlignment="Top" Click="rulesbtn_Click" Height="30"/>
 
         <Border Background="IndianRed" Margin="51,309,38,70" Padding="10" CornerRadius="15,15,15,15" BorderThickness="1,1,1,1">
-            <TextBlock FontSize="14" HorizontalAlignment="Center" TextWrapping="Wrap" FontWeight="Bold" Margin="0,-8,0,7"><Run Text="Puntajes"/></TextBlock>
+            <TextBlock FontSize="14" HorizontalAlignment="Center" TextWrapping="Wrap" FontWeight="Bold" Margin="0,-8,0,41"><Run Text="Puntajes"/></TextBlock>
         </Border>
         <Label x:Name="jugadorPuntosEtiqueta" Content="Tu puntaje: " Margin="65,354,0,0" Width="156" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" Padding="1"/>
         <Label x:Name="pcPuntosEtiqueta" Content="Puntaje de la PC:" Margin="65,330,0,0" Width="156" RenderTransformOrigin="0.579,0.425" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" Padding="1"/>
