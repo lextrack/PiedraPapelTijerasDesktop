@@ -10,16 +10,16 @@
     <Grid>
         <TextBox x:Name="promptUser" HorizontalAlignment="Center" Margin="0,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138" FontFamily="Segoe UI" FontSize="14" Height="24" SelectionBrush="IndianRed" FontWeight="Bold" BorderThickness="2,2,2,2" TextChanged="promptUser_TextChanged"/>
         <Button x:Name="ButtonCheck" Content="Jugar" HorizontalAlignment="Center" Margin="0,130,0,0" Width="138" Click="Button_Click" FontFamily="Segoe UI" FontSize="14" VerticalAlignment="Top" Height="30"/>
-        <Button x:Name="exitBtn" Content="Salir" HorizontalAlignment="Left" Margin="255,421,0,0" Width="92" Click="Button_Click_1" FontFamily="Segoe UI" FontSize="14" VerticalAlignment="Top" Height="30"/>
-        <Button x:Name="rulesbtn" Content="¿Cómo jugar?" HorizontalAlignment="Left" Margin="51,421,0,0" Width="92" FontFamily="Segoe UI" FontSize="14" VerticalAlignment="Top" Click="rulesbtn_Click" Height="30"/>
+        <Button x:Name="exitBtn" Content="Salir" Margin="255,421,0,0" Width="92" Click="Button_Click_1" FontFamily="Segoe UI" FontSize="14" VerticalAlignment="Center" Height="30" HorizontalAlignment="Left"/>
+        <Button x:Name="rulesbtn" Content="¿Cómo jugar?" Margin="51,421,0,0" Width="92" FontFamily="Segoe UI" FontSize="14" VerticalAlignment="Center" Click="rulesbtn_Click" Height="30" HorizontalAlignment="Left"/>
 
-        <Border Background="IndianRed" Margin="51,309,38,70" Padding="10" CornerRadius="15,15,15,15" BorderThickness="1,1,1,1">
-            <TextBlock FontSize="14" HorizontalAlignment="Center" TextWrapping="Wrap" FontWeight="Bold" Margin="0,-8,0,41"><Run Text="Puntajes"/></TextBlock>
+        <Border Background="IndianRed" Margin="51,309,52,70" Padding="10" CornerRadius="15,15,15,15" BorderThickness="1,1,1,1">
+            <TextBlock FontSize="14" HorizontalAlignment="Center" TextWrapping="Wrap" FontWeight="Bold" Margin="0,-8,0,41" VerticalAlignment="Top"><Run Text="Puntajes"/></TextBlock>
         </Border>
-        <Label x:Name="jugadorPuntosEtiqueta" Content="Tu puntaje: " Margin="65,354,0,0" Width="156" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" Padding="1"/>
-        <Label x:Name="pcPuntosEtiqueta" Content="Puntaje de la PC:" Margin="65,330,0,0" Width="156" RenderTransformOrigin="0.579,0.425" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" Padding="1"/>
+        <Label x:Name="jugadorPuntosEtiqueta" Content="Tu puntaje: " Margin="65,354,0,0" Width="156" FontSize="14" Padding="1" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label x:Name="pcPuntosEtiqueta" Content="Puntaje de la PC:" Margin="65,330,0,0" Width="156" RenderTransformOrigin="0.579,0.425" FontSize="14" Padding="1" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
-        <Border Background="#FF6AC1DE" Margin="0,15,0,0" Padding="10" CornerRadius="15,15,15,15" VerticalAlignment="Top" HorizontalAlignment="Center" Width="296">
+        <Border Background="#FF6AC1DE" Margin="0,15,0,0" Padding="10" CornerRadius="15,15,15,15" VerticalAlignment="Top" Width="296">
             <TextBlock FontSize="19" HorizontalAlignment="Left" TextWrapping="Wrap" Width="200" FontWeight="Bold" Margin="42,0,0,0"><Run Text="Piedra, papel o tijeras"/></TextBlock>
         </Border>
     </Grid>
