@@ -1,5 +1,5 @@
 # Piedra Papel o Tijeras
-Un juego de piedra, papel o tijeras hecho en WPF (Gracias por la idea a Platzi)
+Un juego de piedra, papel o tijeras hecho en WPF
 
 Requiere .NET 7.0
 
