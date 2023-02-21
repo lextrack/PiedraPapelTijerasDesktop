@@ -6,11 +6,11 @@ using System.Windows.Media.Animation;
 namespace RockPaperScissors
 {
     /// <summary>
-    /// Interaction logic for ReglasForm.xaml
+    /// Interaction logic for About.xaml
     /// </summary>
-    public partial class ReglasForm : Window
+    public partial class About : Window
     {
-        public ReglasForm()
+        public About()
         {
             InitializeComponent();
         }
@@ -30,17 +30,18 @@ namespace RockPaperScissors
             moveAnimation.BeginTime = TimeSpan.FromMilliseconds(0);
 
             TranslateTransform moveTransform = new TranslateTransform();
-            GroupTextBlockReglas.RenderTransform = moveTransform;
+            GroupTextBlock.RenderTransform = moveTransform;
 
             Storyboard sb = new Storyboard();
             sb.Children.Add(fadeAnimation);
             sb.Children.Add(moveAnimation);
-            Storyboard.SetTarget(fadeAnimation, GroupTextBlockReglas);
-            Storyboard.SetTarget(moveAnimation, GroupTextBlockReglas);
+            Storyboard.SetTarget(fadeAnimation, GroupTextBlock);
+            Storyboard.SetTarget(moveAnimation, GroupTextBlock);
             Storyboard.SetTargetProperty(fadeAnimation, new PropertyPath("(UIElement.Opacity)"));
             Storyboard.SetTargetProperty(moveAnimation, new PropertyPath("(UIElement.RenderTransform).(TranslateTransform.X)"));
 
             sb.Begin();
         }
+
     }
 }

@@ -8,22 +8,22 @@ namespace RockPaperScissors
     /// </summary>
     public partial class MainWindow : Window
     {
-        int Jugador = 0;
+        int Player = 0;
         int Pc = 0;
-        int Triunfos = 0;
-        int Perdidas = 0;
+        int Triumphs = 0;
+        int Loses = 0;
 
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private int Aleatorio(int min, int max)
+        private int Rand(int min, int max)
         {
             return (int)Math.Floor(new Random().NextDouble() * (max - min + 1) + min);
         }
 
-        public static string Eleccion(int jugada)
+        public static string Decision(int jugada)
         {
             string resultado = "";
 
@@ -41,44 +41,59 @@ namespace RockPaperScissors
             }
             else
             {
-                resultado = "Elección incorrecta";
+                resultado = "Decisión incorrecta";
             }
 
             return resultado;
         }
 
-
-        private void Button_Click(object sender, RoutedEventArgs e)
+        public void OperationsCheck()
         {
-            if (int.TryParse(promptUser.Text, out Jugador) && Jugador >= 1 && Jugador <= 3)
+            if (int.TryParse(promptUser.Text, out Player) && Player >= 1 && Player <= 3)
             {
-                Pc = Aleatorio(1, 3);
-                MessageBox.Show("La PC elige " + Eleccion(Pc), "🎮");
-                MessageBox.Show("Tú eliges " + Eleccion(Jugador), "🎮");
+                Pc = Rand(1, 3);
 
-                if (Pc == Jugador)
+                WinAlertRound customMessageBox = new WinAlertRound();
+                customMessageBox.SetMessagePC("La PC elige " + Decision(Pc));
+                customMessageBox.ShowDialog();
+
+                customMessageBox = new WinAlertRound();
+                customMessageBox.SetMessagePlayer("Tú eliges " + Decision(Player));
+                customMessageBox.ShowDialog();
+
+                if (Pc == Player)
                 {
-                    MessageBox.Show("EMPATADOS", "‼");
+                    customMessageBox = new WinAlertRound();
+                    customMessageBox.SetMessageTie("EMPATADOS");
+                    customMessageBox.ShowDialog();
                 }
-                else if (Jugador == 1 && Pc == 3)
+                else if (Player == 1 && Pc == 3)
                 {
-                    MessageBox.Show("GANASTE", "🏆");
-                    Triunfos++;
+                    customMessageBox = new WinAlertRound();
+                    customMessageBox.SetMessageWin("GANASTE");
+                    customMessageBox.ShowDialog();
+                    Triumphs++;
                 }
-                else if (Jugador == 2 && Pc == 1)
+                else if (Player == 2 && Pc == 1)
                 {
-                    MessageBox.Show("GANASTE", "🏆");
-                    Triunfos++;
+                    customMessageBox = new WinAlertRound();
+                    customMessageBox.SetMessageWin("GANASTE");
+                    customMessageBox.ShowDialog();
+                    Triumphs++;
                 }
-                else if (Jugador == 3 && Pc == 2)
+                else if (Player == 3 && Pc == 2)
                 {
-                    MessageBox.Show("GANASTE", "🏆");
-                    Triunfos++;
+                    customMessageBox = new WinAlertRound();
+                    customMessageBox.SetMessageWin("GANASTE");
+                    customMessageBox.ShowDialog();
+                    Triumphs++;
                 }
                 else
                 {
-                    MessageBox.Show("PERDISTE", "💢");
-                    Perdidas++;
+                    customMessageBox = new WinAlertRound();
+                    customMessageBox.SetMessageLose("PERDISTE");
+                    customMessageBox.ShowDialog();
+                    Loses++;
                 }
             }
             else if (promptUser.Text == "")
@@ -87,11 +102,17 @@ namespace RockPaperScissors
             }
             else
             {
-                MessageBox.Show("Solo puedes ingrear números (1 para piedra, 2 para papel y 3 para tijera)", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("No puedes ingresar letras ni simbolos, solo números", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
-            pcPuntosEtiqueta.Content = "Puntos de la PC: " + Perdidas;
-            jugadorPuntosEtiqueta.Content = "Tu puntaje: " + Triunfos;
+            pcPuntosEtiqueta.Content = "Puntaje del PC: " + Loses;
+            jugadorPuntosEtiqueta.Content = "Tu puntaje: " + Triumphs;
+        }
+
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            OperationsCheck();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -105,9 +126,38 @@ namespace RockPaperScissors
             newReglasForm.Show();
         }
 
+        private void Aboutbtn_Click(object sender, RoutedEventArgs e)
+        {
+            About newabout = new();
+            newabout.ShowDialog();
+        }
+
         private void promptUser_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
         {
+            if (int.TryParse(promptUser.Text, out int number))
+            {
+                NumberDescriptionTextBlock.Text = GetNumberDescription(number);
+            }
+            else
+            {
+                NumberDescriptionTextBlock.Text = "";
+            }
+        }
 
+        private string GetNumberDescription(int number)
+        {
+            switch (number)
+            {
+                case 1:
+                    return "Haz seleccionado piedra 🧱";
+                case 2:
+                    return "Haz seleccionado papel 📄";
+                case 3:
+                    return "Haz seleccionado tijera ✂";
+                // Agrega más casos según sea necesario
+                default:
+                    return "";
+            }
         }
     }
 }

@@ -5,24 +5,33 @@
     <TargetFramework>net7.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
-    <AssemblyVersion>1.0.1</AssemblyVersion>
-    <FileVersion>1.0.1</FileVersion>
+    <AssemblyVersion>1.0.2</AssemblyVersion>
+    <FileVersion>1.0.2</FileVersion>
     <Copyright>lextrack</Copyright>
-    <ApplicationIcon>scissors.ico</ApplicationIcon>
+    <ApplicationIcon>rock-paper-scissors.ico</ApplicationIcon>
     <Authors>Lextrack</Authors>
     <Description>Juega a piedra, papel o tijeras</Description>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="scissors.png" />
+    <None Remove="Resources\lose.png" />
+    <None Remove="Resources\perder.png" />
+    <None Remove="Resources\rock-paper-scissors.png" />
+    <None Remove="Resources\tied.png" />
+    <None Remove="Resources\trophy.png" />
+    <None Remove="Resources\winner.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="scissors.ico" />
+    <Content Include="rock-paper-scissors.ico" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="scissors.png" />
+    <Resource Include="Resources\lose.png" />
+    <Resource Include="Resources\rock-paper-scissors.png" />
+    <Resource Include="Resources\tied.png" />
+    <Resource Include="Resources\winner.png" />
+    <Resource Include="Resources\scissors.png" />
   </ItemGroup>
 
 </Project>

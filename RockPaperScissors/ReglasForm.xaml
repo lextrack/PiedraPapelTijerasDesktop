@@ -5,31 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RockPaperScissors"
         mc:Ignorable="d"
-        Title="¿Cómo jugar?" Height="325" Width="400" ResizeMode="NoResize" Icon="/scissors.png" WindowStartupLocation="Manual" Left="355" Top="270">
-    <Grid Margin="0,0,0,-6">
-        <Border Background="IndianRed" Margin="33,13,29,217" Padding="12" CornerRadius="15,15,15,15" VerticalAlignment="Top">
-            <TextBlock FontSize="14" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Debes escribir uno de los siguientes número en la caja de texto"/>
-        </Border>
+        Title="¿Cómo jugar?" Height="325" Width="400" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Left="355" Top="270" Loaded="Window_Loaded" Background="#FF282727">
+    <Grid Margin="0,0,0,-16">
+        <StackPanel x:Name="GroupTextBlockReglas">
+            <Border Background="IndianRed" Margin="33,13,29,217" Padding="12" CornerRadius="15,15,15,15" VerticalAlignment="Top">
+                <TextBlock FontSize="14" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Debes escribir uno de los siguientes número en la caja de texto" Foreground="White"/>
+            </Border>
+            <Border Background="#FF0D95C3" Margin="10,-212,0,300" Padding="12" CornerRadius="15,15,15,15" Width="212">
+                <TextBlock FontSize="14" HorizontalAlignment="Center" TextWrapping="Wrap" Width="66" Height="21" Foreground="White"><Run Text="Opciones:"/></TextBlock>
+            </Border>
 
-        <Border Background="#FF6AC1DE" Margin="142,84,128,172" Padding="12" CornerRadius="15,15,15,15" VerticalAlignment="Top">
-            <TextBlock FontSize="14" HorizontalAlignment="Left" TextWrapping="Wrap" Width="96" Margin="12,-4,0,-6">
-        Opciones:
-            </TextBlock>
-        </Border>
+            <Border Background="IndianRed" Margin="120,-295,106,88" Padding="12" CornerRadius="15,15,15,15" VerticalAlignment="Top">
+                <TextBlock FontSize="14" HorizontalAlignment="Center" TextWrapping="Wrap" Width="106" Foreground="White">
+            1 para piedra 🧱
+            2 para papel 📄
+            3 para tijeras ✂
+                </TextBlock>
+            </Border>
 
-        <Border Background="IndianRed" Margin="120,122,106,88" Padding="12" CornerRadius="15,15,15,15" VerticalAlignment="Top">
-            <TextBlock FontSize="14" HorizontalAlignment="Center" TextWrapping="Wrap" Width="106">
-        1 para piedra 🧱
-        2 para papel 📄
-        3 para tijeras ✂
-            </TextBlock>
-        </Border>
-
-        <Border Background="IndianRed" Margin="33,214,29,15" Padding="12" CornerRadius="15,15,15,15" VerticalAlignment="Top">
-            <TextBlock FontSize="14" HorizontalAlignment="Center" TextWrapping="Wrap">
-        No hay restricciones por turnos, las partidas son infinitas.
-            </TextBlock>
-        </Border>
+            <Border Background="IndianRed" Margin="33,-210,30,15" Padding="12" CornerRadius="15,15,15,15" VerticalAlignment="Top">
+                <TextBlock FontSize="14" HorizontalAlignment="Center" TextWrapping="Wrap" Foreground="White">
+        No hay restricciones de ningún tipo, las partidas son infinitas.
+                </TextBlock>
+            </Border>
+        </StackPanel>
 
     </Grid>
 </Window>
