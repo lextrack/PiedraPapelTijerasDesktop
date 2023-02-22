@@ -98,7 +98,7 @@ namespace RockPaperScissors
             }
             else if (promptUser.Text == "")
             {
-                MessageBox.Show("La caja de texto no puede estar vacía, elige uno de los números", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("La caja de texto no puede estar vacía, elige uno de los números para comenzar a jugar (1, 2 o 3)", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             else
             {
@@ -154,7 +154,6 @@ namespace RockPaperScissors
                     return "Haz seleccionado papel 📄";
                 case 3:
                     return "Haz seleccionado tijera ✂";
-                // Agrega más casos según sea necesario
                 default:
                     return "";
             }
