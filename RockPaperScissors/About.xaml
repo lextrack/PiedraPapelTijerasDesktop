@@ -17,7 +17,7 @@
             </Border>
 
             <Border Background="IndianRed" Margin="15,7,10,0" CornerRadius="15,15,15,15" VerticalAlignment="Top" Height="76">
-                <TextBlock FontSize="12" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Puedes encontrar este proyecto en GitHub, su nombre es “PiedraPapelTijerasDesk” y mi nombre es “Lextrack”. !Mantente alerta, habrá más actualizaciones pronto!" Margin="0,5,0,2" Foreground="White"/>
+                <TextBlock FontSize="12" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Puedes encontrar este proyecto en GitHub, su nombre es “PiedraPapelTijerasDesktop” y mi nombre es “Lextrack”. !Mantente alerta, habrá más actualizaciones pronto!" Margin="0,5,0,2" Foreground="White"/>
             </Border>
         </StackPanel>
 
